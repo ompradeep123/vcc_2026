@@ -82,6 +82,8 @@ export default function FlagHunt() {
               <div className="p-6 bg-gradient-to-br from-red-500/5 to-orange-500/5 rounded-lg border border-border">
                 <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2">
                   <Trophy className="w-6 h-6 text-red-500" />
+                  Prizes
+                </h3>
                 <p className="text-foreground/70">Distributed among top performers</p>
               </div>
 
