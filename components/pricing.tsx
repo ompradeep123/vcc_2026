@@ -114,6 +114,7 @@ export default function Pricing() {
                 </div>
 
                 <button
+                  onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
                   className={`w-full py-3 rounded-lg font-semibold transition-all mb-6 ${
                     tier.highlighted
                       ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-lg hover:shadow-primary/50"

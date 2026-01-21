@@ -92,7 +92,7 @@ export default function HeroUnique() {
               transition={{ delay: 0.6 }}
               className="flex gap-4 pt-4"
             >
-              <button className="group px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105 flex items-center gap-2">
+              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="group px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105 flex items-center gap-2">
                 Register Now
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>

@@ -104,6 +104,7 @@ export default function RegistrationCTA() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                       tier.highlight
                         ? "bg-foreground text-background hover:shadow-lg hover:shadow-primary/50"

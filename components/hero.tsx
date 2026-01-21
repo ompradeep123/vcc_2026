@@ -45,7 +45,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-semibold text-primary-foreground hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105 flex items-center justify-center gap-2 group">
+              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-semibold text-primary-foreground hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105 flex items-center justify-center gap-2 group">
                 Register Now <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="px-8 py-3 border border-primary/50 rounded-lg font-semibold text-primary hover:bg-primary/10 transition-colors flex items-center justify-center gap-2">
