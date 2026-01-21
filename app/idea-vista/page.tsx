@@ -34,13 +34,6 @@ export default function IdeaVista() {
               Innovate, Pitch, and Launch. A platform for cybersecurity entrepreneurs to showcase their groundbreaking
               ideas and secure funding.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors"
-            >
-              Submit Your Idea
-            </motion.button>
           </motion.div>
         </div>
       </section>
