@@ -85,9 +85,7 @@ export default function Speakers() {
                   <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>
                   <p className="text-sm text-primary font-semibold mb-2 min-h-[2.25rem] flex items-center justify-center">{speaker.title}</p>
                   <p className="text-sm text-foreground/70 mb-4 min-h-[2rem] flex items-center justify-center">{speaker.company}</p>
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium mt-auto">
-                    {speaker.specialty}
-                  </div>
+                  {/* No specialty property, so this badge is removed */}
                 </motion.div>
               ))}
             </div>
@@ -117,9 +115,7 @@ export default function Speakers() {
                   <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>
                   <p className="text-sm text-primary font-semibold mb-2 min-h-[2.25rem] flex items-center justify-center">{speaker.title}</p>
                   <p className="text-sm text-foreground/70 mb-4 min-h-[2rem] flex items-center justify-center">{speaker.company}</p>
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium mt-auto">
-                    {speaker.specialty}
-                  </div>
+                  {/* No specialty property, so this badge is removed */}
                 </motion.div>
               ))}
             </div>
