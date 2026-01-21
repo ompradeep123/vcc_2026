@@ -6,46 +6,40 @@ import Image from "next/image"
 export default function Speakers() {
   const speakers = [
     {
-      name: "Dr. Sarah Chen",
-      title: "Chief Security Officer",
-      company: "Global Tech Solutions",
-      specialty: "Cloud Security",
-      //image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
+      name: "Ms. Dija S",
+      title: "Scientist F, CDAC-Trivandrum",
+      company: "Chief Guest & Panelist",
+      image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
     },
     {
-      name: "Prof. Rajesh Kumar",
-      title: "Cybersecurity Research Lead",
-      company: "Elite University",
-      specialty: "Threat Intelligence",
-      //image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
+      name: "Mr. Ramanathan Kannabiran",
+      title: "Head-ManageEngine, ZOHO Corporation, Chennai",
+      company: "Panelist",
+      image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
     },
     {
-      name: "Alex Thompson",
-      title: "Ethical Hacking Expert",
-      company: "SecureNet Labs",
-      specialty: "Penetration Testing",
-      //image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
+      name: "Mr. Vinod Senthil",
+      title: "Managing Director, DigiALERT, Chennai",
+      company: "Panel-Moderator",
+      image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
     },
     {
-      name: "Dr. Sarah Chen",
-      title: "Chief Security Officer",
-      company: "Global Tech Solutions",
-      specialty: "Cloud Security",
-      //image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
+      name: "Dr. Prabhakar Ramakrishnan",
+      title: "CISO & AVP, TNQTech, Chennai",
+      company: "Panelist",
+      image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
     },
     {
-      name: "Prof. Rajesh Kumar",
-      title: "Cybersecurity Research Lead",
-      company: "Elite University",
-      specialty: "Threat Intelligence",
-      //image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
+      name: "Mr. Subash J",
+      title: "DFIR Consultant",
+      company: "Expert Member",
+      image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
     },
     {
-      name: "Alex Thompson",
-      title: "Ethical Hacking Expert",
-      company: "SecureNet Labs",
-      specialty: "Penetration Testing",
-      //image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
+      name: "Mr. Srinivasa J",
+      title: "CTO, Necurity Solutions",
+      company: "Expert Member",
+      image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
     },
   ]
 
@@ -78,15 +72,20 @@ export default function Speakers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: idx * 0.15 }}
                   viewport={{ once: true }}
-                  className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                  className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
-                    
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2 font-serif">{speaker.name}</h3>
-                  <p className="text-sm text-primary font-semibold mb-2">{speaker.title}</p>
-                  <p className="text-sm text-foreground/70 mb-4">{speaker.company}</p>
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium">
+                  <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>
+                  <p className="text-sm text-primary font-semibold mb-2 min-h-[2.25rem] flex items-center justify-center">{speaker.title}</p>
+                  <p className="text-sm text-foreground/70 mb-4 min-h-[2rem] flex items-center justify-center">{speaker.company}</p>
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium mt-auto">
                     {speaker.specialty}
                   </div>
                 </motion.div>
@@ -105,15 +104,20 @@ export default function Speakers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: idx * 0.15 }}
                   viewport={{ once: true }}
-                  className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 w-full md:w-80"
+                  className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 w-full md:w-80 flex flex-col h-full"
                 >
                   <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
-                    
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2 font-serif">{speaker.name}</h3>
-                  <p className="text-sm text-primary font-semibold mb-2">{speaker.title}</p>
-                  <p className="text-sm text-foreground/70 mb-4">{speaker.company}</p>
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium">
+                  <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>
+                  <p className="text-sm text-primary font-semibold mb-2 min-h-[2.25rem] flex items-center justify-center">{speaker.title}</p>
+                  <p className="text-sm text-foreground/70 mb-4 min-h-[2rem] flex items-center justify-center">{speaker.company}</p>
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-xs text-primary font-medium mt-auto">
                     {speaker.specialty}
                   </div>
                 </motion.div>

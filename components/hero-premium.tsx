@@ -25,7 +25,7 @@ export default function HeroPremium() {
             className="-mt-6 sm:-mt-10 mb-0 flex justify-center"
           >
             <img
-              src={`/vCC_logo.png?t=${new Date().getTime()}`}
+              src="/vCC_logo.png"
               alt="VCC Logo"
               className="w-auto h-auto max-w-xs sm:max-w-md md:max-w-2xl drop-shadow-2xl"
             />
