@@ -81,9 +81,7 @@ export default function IdeaVista() {
               <div className="p-6 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-lg border border-border">
                 <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2">
                   <Award className="w-6 h-6 text-purple-500" />
-                  Funding Available
-                </h3>
-                <p className="text-3xl font-bold text-purple-500 mb-2">₹25+ Lakhs</p>
+          
                 <p className="text-foreground/70">For top 5 ideas selected</p>
               </div>
 
