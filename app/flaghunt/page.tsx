@@ -92,7 +92,7 @@ export default function FlagHunt() {
                   <Users className="w-6 h-6 text-orange-500" />
                   Team Format
                 </h3>
-                <p className="text-foreground/70">Teams of 3-4 members from different institutions</p>
+                <p className="text-foreground/70">Teams of 1-2 members from different institutions</p>
               </div>
             </motion.div>
           </div>
