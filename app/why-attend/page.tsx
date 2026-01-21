@@ -96,24 +96,7 @@ export default function WhyAttend() {
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "1000+", label: "Attendees" },
-              { number: "20+", label: "Speakers" },
-              { number: "10+", label: "Organizations" },
-              { number: "20+", label: "Events" },
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <p className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.number}</p>
-                <p className="text-foreground/60">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
+         
         </div>
       </section>
 

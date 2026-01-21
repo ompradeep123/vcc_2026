@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -85,10 +85,10 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a href="#" className="p-2 hover:bg-background/20 rounded-lg transition-colors">
-                <Linkedin size={20} />
+                <Instagram size={20} />
               </a>
               <a href="#" className="p-2 hover:bg-background/20 rounded-lg transition-colors">
-                <Twitter size={20} />
+                <Linkedin size={20} />
               </a>
             </div>
           </motion.div>
