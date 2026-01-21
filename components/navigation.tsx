@@ -22,7 +22,6 @@ export default function Navigation() {
     { label: "Conclave Schedule", href: "/schedule" },
     { label: "Speakers", href: "/speakers" },
     { label: "FlagHunt 7.0", href: "/flaghunt" },
-    { label: "Idea Vista", href: "/idea-vista" },
     { label: "Registration", href: "/register" },
   ]
 
