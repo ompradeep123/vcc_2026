@@ -20,7 +20,7 @@ export default function Navigation() {
     { label: "Home", href: "/" },
     { label: "Why Attend", href: "/why-attend" },
     { label: "Conclave Schedule", href: "/schedule" },
-    { label: "Speakers", href: "/speakers" },
+    //{ label: "Speakers", href: "/speakers" },
     { label: "FlagHunt 7.0", href: "/flaghunt" },
     { label: "Idea Vista", href: "/idea-vista" },
     { label: "Registration", href: "/register" },
