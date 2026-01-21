@@ -38,20 +38,20 @@ export default function Navigation() {
         isSticky ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-5">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="font-serif text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+          <Link href="/" className="font-serif text-lg sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
             VCC 2026
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 md:gap-8">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-foreground/70 hover:text-primary transition-colors text-sm font-medium tracking-wide"
+                className="text-foreground/70 hover:text-primary transition-colors text-xs sm:text-sm font-medium tracking-wide"
               >
                 {item.label}
               </Link>
@@ -86,12 +86,12 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col gap-3 pt-4">
+            <div className="flex flex-col gap-2 pt-4">
               {menuItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-foreground/70 hover:text-primary text-sm font-medium py-2"
+                  className="block text-foreground/70 hover:text-primary text-xs sm:text-sm font-medium py-2 px-2 rounded hover:bg-primary/5 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}

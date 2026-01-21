@@ -5,9 +5,9 @@ import { Mail, Phone, Linkedin, Twitter } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-foreground text-background py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -15,8 +15,8 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-serif text-2xl font-bold mb-4">VCC 2026</h3>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold mb-3 sm:mb-4">VCC 2026</h3>
+            <p className="text-background/70 text-xs sm:text-sm leading-relaxed">
               Vel Tech CyberCatalyst - Where Academia and Industry Converge
             </p>
           </motion.div>
@@ -28,8 +28,8 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-3 text-sm text-background/70">
+            <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Navigation</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-background/70">
               <li>
                 <a href="#about" className="hover:text-background transition-colors">
                   About

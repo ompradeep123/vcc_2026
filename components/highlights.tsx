@@ -38,25 +38,25 @@ const events = [
 
 export default function Highlights() {
   return (
-    <section id="highlights" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="highlights" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative\">
+      <div className=\"max-w-7xl mx-auto\">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className=\"text-center mb-12 sm:mb-16\"
         >
-          <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">Event Highlights</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-foreground mb-6">
+          <p className=\"text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2 sm:mb-4\">Event Highlights</p>
+          <h2 className=\"text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-foreground mb-4 sm:mb-6\">
             Diverse Range of Activities
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className=\"text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto\">
             Explore cybersecurity challenges, presentations, and networking opportunities designed for all skill levels
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8\">
           {events.map((event, idx) => {
             const Icon = event.icon
             return (

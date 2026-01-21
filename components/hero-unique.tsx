@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react"
 
 export default function HeroUnique() {
   return (
-    <section className="min-h-screen flex items-center relative pt-20 overflow-hidden">
+    <section className="min-h-screen flex items-center relative py-12 sm:py-16 md:pt-20 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-30">
         <motion.div
-          className="absolute top-20 right-0 w-96 h-96 rounded-full"
+          className="absolute top-10 sm:top-20 -right-32 sm:right-0 w-48 sm:w-96 h-48 sm:h-96 rounded-full"
           style={{
             background: "radial-gradient(circle, rgba(171, 224, 230, 0.1) 0%, transparent 70%)",
           }}
@@ -24,7 +24,7 @@ export default function HeroUnique() {
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-96 h-96 rounded-full"
+          className="absolute -bottom-20 -left-32 sm:bottom-0 sm:left-0 w-48 sm:w-96 h-48 sm:h-96 rounded-full"
           style={{
             background: "radial-gradient(circle, rgba(255, 71, 87, 0.08) 0%, transparent 70%)",
           }}
@@ -41,13 +41,13 @@ export default function HeroUnique() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -55,10 +55,10 @@ export default function HeroUnique() {
               transition={{ delay: 0.2 }}
               className="inline-block"
             >
-              <span className="text-sm font-mono text-primary tracking-widest uppercase">February 12 & 13, 2026</span>
+              <span className="text-xs sm:text-sm font-mono text-primary tracking-widest uppercase">February 12 & 13, 2026</span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function HeroUnique() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg text-foreground/70 max-w-lg leading-relaxed"
+              className="text-base sm:text-lg text-foreground/70 max-w-lg leading-relaxed"
             >
               Join industry leaders and academic experts at an exclusive conclave where innovation meets expertise.
             </motion.p>
@@ -90,13 +90,13 @@ export default function HeroUnique() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex gap-4 pt-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
-              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="group px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105 flex items-center gap-2">
+              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="group w-full sm:w-auto px-6 sm:px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
                 Register Now
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-3 border border-foreground/30 text-foreground font-semibold rounded-lg hover:border-primary hover:text-primary transition-all">
+              <button className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-foreground/30 text-foreground font-semibold rounded-lg hover:border-primary hover:text-primary transition-all text-sm sm:text-base">
                 Learn More
               </button>
             </motion.div>

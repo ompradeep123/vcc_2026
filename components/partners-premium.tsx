@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Partners() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 relative bg-muted/10">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative bg-muted/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,11 +13,11 @@ export default function Partners() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl font-bold text-foreground mb-2">Organized By</h3>
-          <p className="text-foreground/70">School of Computing, Vel Tech Chennai</p>
+          <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Organized By</h3>
+          <p className="text-foreground/70 text-sm sm:text-base">School of Computing, Vel Tech Chennai</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-12 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 text-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
