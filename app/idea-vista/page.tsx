@@ -46,7 +46,58 @@ export default function IdeaVista() {
         </div>
       </section>
 
+      {/* Program Details */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">What We're Looking For</h2>
+              <ul className="space-y-4">
+                {[
+                  "AI/ML-powered Security Solutions",
+                  "Zero-Trust Architecture Innovations",
+                  "Quantum-Safe Cryptography",
+                  "Threat Intelligence Platforms",
+                  "DevSecOps Tools",
+                  "Privacy-Preserving Technologies",
+                ].map((idea, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-lg">
+                    <Rocket className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                    <span>{idea}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <div className="p-6 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-lg border border-border">
+                <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2">
+                  <Award className="w-6 h-6 text-purple-500" />
+                  Prize Pool
+                </h3>
+                <p className="text-foreground/70">For top 5 ideas selected</p>
+              </div>
+
+              <div className="p-6 bg-gradient-to-br from-pink-500/5 to-rose-500/5 rounded-lg border border-border">
+                <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2">
+                  <Users className="w-6 h-6 text-pink-500" />
+                  Mentorship
+                </h3>
+                <p className="text-foreground/70">Access to industry leaders and venture capitalists</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>
