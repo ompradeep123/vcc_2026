@@ -84,7 +84,7 @@ export default function IdeaVista() {
                   <Award className="w-6 h-6 text-purple-500" />
                   Prize Pool
                 </h3>
-                <p className="text-foreground/70">For top 5 ideas selected</p>
+                <p className="text-foreground/70">For top 3 ideas selected</p>
               </div>
 
               <div className="p-6 bg-gradient-to-br from-pink-500/5 to-rose-500/5 rounded-lg border border-border">
