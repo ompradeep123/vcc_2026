@@ -42,7 +42,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               Email:{" "}
               <a href="mailto:vcc@vit.ac.in" className="text-foreground hover:text-primary transition-colors">
-                vcc@vit.ac.in
+                vcc@veltech.edu.in
               </a>
             </p>
           </div>

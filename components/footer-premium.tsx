@@ -65,12 +65,12 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail size={16} />
                 <a href="mailto:vcc@vit.ac.in" className="hover:text-background transition-colors">
-                  vcc@vit.ac.in
+                  vcc@veltech.edu.in
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+91 XXXX XXXX XX</span>
+                <span>+91 8008572389</span>
               </li>
             </ul>
           </motion.div>
