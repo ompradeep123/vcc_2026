@@ -13,7 +13,7 @@ export default function Speakers() {
     },
     {
       name: "Mr. Ramanathan Kannabiran",
-      title: "Director-ManageEngine, \n ZOHO Corporation, Chennai",
+      title: "Director-ManageEngine, ZOHO Corporation, Chennai",
       company: "Panelist",
       image: "/speakers/ramanathan.png",
     },
