@@ -9,37 +9,37 @@ export default function Speakers() {
       name: "Ms. Dija S",
       title: "Scientist F, CDAC-Trivandrum",
       company: "Chief Guest & Panelist",
-      image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
+      image: "/speakers/dija.png",
     },
     {
       name: "Mr. Ramanathan Kannabiran",
-      title: "Head-ManageEngine, ZOHO Corporation, Chennai",
+      title: "Director-ManageEngine, \n ZOHO Corporation, Chennai",
       company: "Panelist",
-      image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
+      image: "/speakers/ramanathan.png",
     },
     {
       name: "Mr. Vinod Senthil",
       title: "Managing Director, DigiALERT, Chennai",
       company: "Panel-Moderator",
-      image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
+      image: "/speakers/vinod.png",
     },
     {
       name: "Dr. Prabhakar Ramakrishnan",
       title: "CISO & AVP, TNQTech, Chennai",
       company: "Panelist",
-      image: "https://via.placeholder.com/400x400?text=Dr.+Sarah+Chen",
+      image: "/speakers/prabhakar.png",
     },
     {
       name: "Mr. Subash J",
       title: "DFIR Consultant",
       company: "Expert Member",
-      image: "https://via.placeholder.com/400x400?text=Prof.+Rajesh+Kumar",
+      image: "/speakers/subash.png",
     },
     {
       name: "Mr. Srinivasa J",
       title: "CTO, Necurity Solutions",
       company: "Expert Member",
-      image: "https://via.placeholder.com/400x400?text=Alex+Thompson",
+      image: "/speakers/srinivas.png",
     },
   ]
 
@@ -74,12 +74,13 @@ export default function Speakers() {
                   viewport={{ once: true }}
                   className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full"
                 >
-                  <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+                  <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border-4 border-primary/20">
                     <Image
                       src={speaker.image}
                       alt={speaker.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-full"
+                      unoptimized={speaker.image.startsWith('/speakers/')}
                     />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>
@@ -104,12 +105,12 @@ export default function Speakers() {
                   viewport={{ once: true }}
                   className="group p-8 rounded-lg border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 w-full md:w-80 flex flex-col h-full"
                 >
-                  <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+                  <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border-4 border-primary/20">
                     <Image
                       src={speaker.image}
                       alt={speaker.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-full"
                     />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2 font-serif min-h-[2.5rem] flex items-center justify-center">{speaker.name}</h3>

@@ -35,13 +35,7 @@ export default function RegisterCTA() {
             >
               Register Now
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-primary text-primary rounded-full font-bold text-sm sm:text-lg hover:bg-primary/5 transition-colors"
-            >
-              Contact Us
-            </motion.button>
+            
           </div>
 
           <p className="text-xs sm:text-sm text-foreground/60">Early bird registrations open now</p>
