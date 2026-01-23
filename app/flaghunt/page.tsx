@@ -3,7 +3,8 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer-premium"
 import { motion } from "framer-motion"
-import { Flag, Target, Trophy, Users } from "lucide-react"
+import { Flag, Target, Trophy, Users, BookOpen, ShieldAlert, Cpu, Terminal, ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 export default function FlagHunt() {
   return (
@@ -34,14 +35,104 @@ export default function FlagHunt() {
               An intense cybersecurity Capture The Flag competition featuring real-world scenarios, advanced challenges,
               and substantial prizes.
             </p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mb-6 flex flex-col items-center gap-1"
+            >
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+              <motion.p
+                animate={{
+                  textShadow: ["0 0 0px rgba(239, 68, 68, 0)", "0 0 15px rgba(239, 68, 68, 0.4)", "0 0 0px rgba(239, 68, 68, 0)"]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="text-xs md:text-sm font-bold tracking-[0.4em] uppercase text-foreground/60"
+              >
+                Powered By <span className="text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]">DigiAlert</span>
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                className="mt-2"
+              >
+                <Image
+                  src="/logo/digialert.png"
+                  alt="DigiAlert Logo"
+                  width={150}
+                  height={50}
+                  className="h-auto w-auto max-h-12 object-contain brightness-110 contrast-125"
+                />
+              </motion.div>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-red-500/50 to-transparent mt-1"></div>
+            </motion.div>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-              className="px-8 py-4 bg-red-500 text-white rounded-full font-semibold hover:bg-red-600 transition-colors"
+              className="px-8 py-4 bg-red-500 text-white rounded-full font-semibold hover:bg-red-600 transition-colors shadow-lg shadow-red-500/25 mb-12"
             >
               Register Team Now
             </motion.button>
+
+            {/* Enhanced Complex Scroll Indicator */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              className="flex flex-col items-center gap-4 mt-8"
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-red-500/60 mb-2">Discover More</span>
+
+              <div className="relative flex items-center justify-center">
+                {/* Outer Glow Rings */}
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute w-20 h-20 bg-red-500/20 rounded-full blur-xl"
+                />
+
+                {/* Animated Mouse Body */}
+                <div className="w-8 h-12 border-2 border-foreground/30 rounded-full flex justify-center p-1.5 relative z-10">
+                  <motion.div
+                    animate={{
+                      y: [0, 20],
+                      opacity: [1, 0],
+                      scale: [1, 0.8]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="w-1.5 h-3 bg-red-500 rounded-full"
+                  />
+                </div>
+              </div>
+
+              {/* Cascading Chevrons */}
+              <div className="flex flex-col items-center -space-y-2 mt-2">
+                {[0, 1, 2].map((i) => (
+                  <motion.div
+                    key={i}
+                    animate={{
+                      opacity: [0.2, 1, 0.2],
+                      y: [0, 4, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: i * 0.2,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <ChevronDown className={`w-6 h-6 ${i === 1 ? 'text-red-500/80' : 'text-red-500/40'}`} />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -63,7 +154,6 @@ export default function FlagHunt() {
                   "Reverse Engineering",
                   "Pwning & Exploitation",
                   "Network Security",
-                  "Cloud Security",
                 ].map((category, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-lg">
                     <Target className="w-5 h-5 text-red-500 flex-shrink-0" />
@@ -84,7 +174,19 @@ export default function FlagHunt() {
                   <Trophy className="w-6 h-6 text-red-500" />
                   Prizes
                 </h3>
-                <p className="text-foreground/70">Distributed among top performers</p>
+                <ul className="space-y-3 mt-4">
+                  {[
+                    "Exciting Cash Prizes",
+                    "Achievement Certificates",
+                    "Special Winners Shields",
+                    "Exclusive Internship Opportunities",
+                  ].map((prize, idx) => (
+                    <li key={idx} className="flex items-center gap-3 bg-red-500/10 p-4 rounded-xl border border-red-500/20 text-foreground font-bold text-base transition-all hover:bg-red-500/20">
+                      <Trophy className="w-5 h-5 text-red-500" />
+                      <span>{prize}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="p-6 bg-gradient-to-br from-orange-500/5 to-yellow-500/5 rounded-lg border border-border">
@@ -92,7 +194,7 @@ export default function FlagHunt() {
                   <Users className="w-6 h-6 text-orange-500" />
                   Team Format
                 </h3>
-                <p className="text-foreground/70">Teams of 1-2 members from different institutions</p>
+                <p className="text-foreground/70">Teams of 1-2 members from same or different institutions</p>
               </div>
             </motion.div>
           </div>
@@ -101,18 +203,85 @@ export default function FlagHunt() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-lg border border-border"
+            className="max-w-6xl mx-auto bg-card/30 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 shadow-xl"
           >
-            <h3 className="text-2xl font-semibold mb-4">About FlagHunt</h3>
-            <p className="text-foreground/70 leading-relaxed mb-4">
-              FlagHunt 7.0 is Vel Tech's premier cybersecurity competition, designed to challenge and inspire the next
-              generation of ethical hackers and security professionals. Participants will face real-world scenarios,
-              advanced exploitation techniques, and strategic problem-solving challenges.
-            </p>
-            <p className="text-foreground/70 leading-relaxed">
-              This year's edition features enhanced challenges, international participants, industry mentorship, and
-              guaranteed internship opportunities for top performers at leading cybersecurity firms.
-            </p>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+              {/* Left Column: Competition Instructions */}
+              <div className="flex flex-col h-full">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 border border-primary/20 shadow-sm">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold font-serif tracking-tight text-foreground">Competition Guidelines</h3>
+                </div>
+
+                <div className="space-y-6 flex-1">
+                  <div className="flex gap-5 group">
+                    <div className="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 shrink-0 flex items-center justify-center border border-red-500/20 group-hover:bg-red-500/20 transition-all duration-300">
+                      <Terminal className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1.5 text-foreground/90">Flag Submission Format</h4>
+                      <p className="text-foreground/60 text-sm leading-relaxed">
+                        Submit flags in the standard format: <code className="bg-red-500/10 px-2.5 py-0.5 rounded text-red-400 font-mono font-bold border border-red-500/10 text-xs">VCC&#123;flag_text&#125;</code>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-5 group">
+                    <div className="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-500 shrink-0 flex items-center justify-center border border-orange-500/20 group-hover:bg-orange-500/20 transition-all duration-300">
+                      <ShieldAlert className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1.5 text-foreground/90">Zero Tolerance Policy</h4>
+                      <p className="text-foreground/60 text-sm leading-relaxed">
+                        Attacking the scoring portal or infrastructure results in <span className="text-orange-500 font-bold">immediate disqualification</span>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-5 group">
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 shrink-0 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-all duration-300">
+                      <Cpu className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1.5 text-foreground/90">Resources & Hardware</h4>
+                      <p className="text-foreground/60 text-sm leading-relaxed">
+                        Teams must carry their own laptops with necessary tools pre-installed for the event.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Quick Rules */}
+              <div className="flex flex-col h-full">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 border border-accent/20 shadow-sm">
+                    <Flag className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold font-serif tracking-tight text-foreground">Quick Rules</h3>
+                </div>
+
+                <div className="bg-foreground/5 rounded-2xl p-6 md:p-8 border border-foreground/10 flex-1">
+                  <ul className="space-y-4">
+                    {[
+                      "Strictly no flag sharing between teams.",
+                      "Judge's final decision is binding and absolute.",
+                      "Teams must consist of 1 to 2 members only.",
+                      "Categorized challenges with dynamic point scaling.",
+                      "Tie-breaker: First team to reach the score wins.",
+                      "Unfair means will lead to direct blacklisting."
+                    ].map((rule, idx) => (
+                      <li key={idx} className="flex items-start gap-3.5 p-3 rounded-xl bg-background/40 border border-foreground/5 transition-all duration-300 hover:border-primary/20">
+                        <div className="mt-1.5 w-2 h-2 rounded-[2px] bg-primary/60 shrink-0" />
+                        <span className="text-sm text-foreground/80 font-medium leading-normal">{rule}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>

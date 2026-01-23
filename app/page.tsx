@@ -2,7 +2,7 @@
 
 import Navigation from "@/components/navigation"
 import HeroPremium from "@/components/hero-premium"
-import Highlights from "@/components/highlights"
+import ConclaveHighlights from "@/components/conclave-highlights"
 import Partners from "@/components/partners-premium"
 import Footer from "@/components/footer-premium"
 import VideoBg from "@/components/video-bg"
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navigation />
         <HeroPremium />
-        <Highlights />
+        <ConclaveHighlights />
         <Partners />
         <Footer />
       </div>

@@ -63,12 +63,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
-                <Mail size={16} />
-                <a href="mailto:vcc@vit.ac.in" className="hover:text-background transition-colors">
-                  vcc@veltech.edu.in
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
+
                 <Phone size={16} />
                 <span>+91 8008572389</span>
               </li>

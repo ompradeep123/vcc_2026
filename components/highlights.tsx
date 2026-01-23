@@ -5,14 +5,14 @@ import { Flag, Users, Lightbulb, Zap, BookOpen, Gamepad2 } from "lucide-react"
 
 const events = [
   {
-    icon: Flag,
-    title: "FlagHunt 7.0",
-    description: "7-hour CTF Challenge",
-  },
-  {
     icon: Users,
     title: "Panel Discussion",
     description: "AI vs Cybersecurity: Threats, Defence and Ethics",
+  },
+  {
+    icon: Flag,
+    title: "FlagHunt 7.0",
+    description: "7-hour CTF Challenge",
   },
   {
     icon: Lightbulb,

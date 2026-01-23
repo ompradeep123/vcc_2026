@@ -39,7 +39,7 @@ export default function SpeakerSpotlight() {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Speakers</h2>
             <p className="text-foreground/70 max-w-xl">
-              Learn from industry pioneers and academic leaders shaping the future of cybersecurity.
+              Industry Conclave and Panel Discussion
             </p>
           </div>
           <motion.button
