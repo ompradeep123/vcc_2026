@@ -1,26 +1,38 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Clock, MapPin } from "lucide-react"
 
 const scheduleData = {
   day1: [
-    { time: "09:00 - 10:00", event: "Inauguration", venue: "Main Hall" },
-    { time: "10:30 - 12:00", event: "Panel Discussion: AI vs Cybersecurity", venue: "Auditorium" },
-    { time: "13:00 - 15:00", event: "Idea Vista & Workshop: Forensics", venue: "Lab A & B" },
-    { time: "15:00 - 16:30", event: "Data Detectives & Logic Links", venue: "Lab C & D" },
+    { time: "09:00 - 10:00", event: "Inauguration", poster: "/posters/vcc_poster.png" },
+    { time: "10:30 - 12:00", event: "Panel Discussion: AI vs Cybersecurity", poster: "/posters/vcc_poster.png" },
+    { time: "13:00 - 15:00", event: "Idea Vista & Workshop: Forensics", poster: "/posters/vcc_poster.png" },
+    { time: "15:00 - 16:30", event: "Data Detectives & Logic Links", poster: "/posters/vcc_poster.png" },
   ],
   day2: [
-    { time: "09:00 - 16:00", event: "FlagHunt 7.0 (CTF Challenge)", venue: "Hacking Lab" },
-    { time: "09:00 - 12:00", event: "Vibeathon - Project Expo", venue: "Exhibition Hall" },
-    { time: "13:00 - 14:00", event: "Cyber Sentinels Quiz & Escape Rooms", venue: "Hall A & B" },
-    { time: "14:15 - 15:15", event: "Log Hunters & Aware Geeks", venue: "Lab E" },
+    { time: "09:00 - 16:00", event: "FlagHunt 7.0 (CTF Challenge)", poster: "/posters/vcc_poster.png" },
+    { time: "09:00 - 12:00", event: "Vibeathon - Project Expo", poster: "/posters/vcc_poster.png" },
+    { time: "13:00 - 14:00", event: "Cyber Sentinels Quiz & Escape Rooms", poster: "/posters/vcc_poster.png" },
+    { time: "14:15 - 15:15", event: "Log Hunters & Aware Geeks", poster: "/posters/vcc_poster.png" },
   ],
 }
 
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalPoster, setModalPoster] = useState("")
+  const [modalEvent, setModalEvent] = useState("")
+
+  const handleMoreInfo = (eventName: string, poster: string) => {
+    setModalPoster(poster)
+    setModalEvent(eventName)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => setModalOpen(false)
 
   return (
     <section id="schedule" className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -84,16 +96,48 @@ export default function Schedule() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-foreground font-serif">{item.event}</h3>
-                    <div className="flex items-center gap-2 mt-2 text-foreground/70 text-sm">
-                      <MapPin size={16} />
-                      {item.venue}
-                    </div>
+                    <div className="flex items-center gap-2 mt-2 text-foreground/70 text-sm"></div>
+                    <button
+                      className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold shadow hover:bg-primary/90 transition-all"
+                      onClick={() => handleMoreInfo(item.event, item.poster)}
+                    >
+                      More Info
+                    </button>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
+      {/* Modal for event poster */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-white rounded-xl shadow-2xl p-6 max-w-md w-full relative animate-fadeIn">
+            <button
+              className="absolute top-2 right-2 text-xl font-bold text-gray-500 hover:text-primary"
+              onClick={closeModal}
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <h4 className="text-lg font-bold mb-4 text-center text-black">{modalEvent} Poster</h4>
+            <div className="flex justify-center items-center min-h-[500px]">
+              <Image
+                src={modalPoster}
+                alt={modalEvent + ' poster'}
+                width={500}
+                height={700}
+                className="rounded-lg object-contain max-h-[650px]"
+                unoptimized
+                onError={(e) => {
+                  // @ts-ignore
+                  e.target.src = '/speakers/dija.png';
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </section>
   )
