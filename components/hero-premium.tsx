@@ -67,13 +67,7 @@ export default function HeroPremium() {
             >
               Register Now
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary/5 transition-colors text-sm sm:text-base"
-            >
-              Learn More
-            </motion.button>
+            
           </div>
         </motion.div>
       </div>
