@@ -192,7 +192,7 @@ export default function Vibathon() {
                                 </div>
                                 <p className="text-foreground/70 leading-relaxed">
                                     Join the Vibeathon on Day 2. Open for students who want to build the future
-                                    using AI. Multidisciplinary teams of 2-4 members are highly welcomed to
+                                    using AI. Multidisciplinary teams of 1 - 2 members are highly welcomed to
                                     address our inter-domain problem statements.
                                 </p>
                             </div>
