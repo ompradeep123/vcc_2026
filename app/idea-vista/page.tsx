@@ -31,8 +31,8 @@ export default function IdeaVista() {
               Idea <span className="text-purple-500">Vista</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-8">
-              The premier <span className="text-purple-500 font-bold">Project Pitching</span> stage.
-              Whether you're a student with a vision or an early-stage startup, pitch your
+              The premier <span className="text-purple-500 font-bold">Poster Presentation</span> stage.
+              Whether you're a student with a vision or an aspiring researcher, showcase your
               <span className="text-pink-500 font-semibold italic"> world-changing innovation</span> here.
               Open to all domains.
             </p>
@@ -42,7 +42,7 @@ export default function IdeaVista() {
               onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
               className="px-8 py-4 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors mb-12 shadow-lg shadow-purple-500/20"
             >
-              Submit Your Pitch
+              Register for Poster Presentation
             </motion.button>
 
             {/* Enhanced Complex Scroll Indicator */}
@@ -100,7 +100,7 @@ export default function IdeaVista() {
                 <Users className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-3 font-serif">Inclusive Stage</h3>
-              <p className="text-foreground/60 text-sm">Students, early-stage startups, and solo innovators. Everyone is welcome to showcase their talent.</p>
+              <p className="text-foreground/60 text-sm">Students, researchers, and solo innovators. Everyone is welcome to showcase their research and innovation.</p>
             </motion.div>
 
             <motion.div
@@ -138,14 +138,14 @@ export default function IdeaVista() {
             >
               <h2 className="text-4xl font-bold mb-6 font-serif">A Visionary Platform</h2>
               <p className="text-foreground/70 mb-8 leading-relaxed text-lg">
-                Idea Vista is more than just a competition; it's an ecosystem for dreamers.
-                We provide the stage for you to pitch projects that bridge the gap between
+                Idea Vista is more than just an exhibition; it's an ecosystem for dreamers.
+                We provide the stage for you to present posters that bridge the gap between
                 current reality and a better future.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Early-stage Startup Pitching",
-                  "Student Project Showcasing",
+                  "Academic & Research Poster Presentation",
+                  "Innovative Project Showcasing",
                   "Multidisciplinary Innovations",
                   "Societal Impact Solutions",
                   "Zero Domain Restriction Policy",
@@ -172,8 +172,8 @@ export default function IdeaVista() {
                   <h3 className="text-2xl font-bold font-serif">Incentives</h3>
                 </div>
                 <p className="text-foreground/70 leading-relaxed">
-                  Top performing ideas will receive certificates, trophies, and potential
-                  access to early-stage mentorship from industry leaders and investors.
+                  Exceptional poster presentations will receive certificates, trophies, and potential
+                  access to mentorship from industry leaders and academic experts.
                 </p>
               </div>
 
@@ -183,8 +183,8 @@ export default function IdeaVista() {
                   <h3 className="text-2xl font-bold font-serif">Registration</h3>
                 </div>
                 <p className="text-foreground/70 leading-relaxed">
-                  Open for all. Register as a solo pitcher or a team. Showcase your prototype
-                  or detailed project plan to our panel of experts on Day 1.
+                  Open for all. Register as a solo presenter or a team. Showcase your research,
+                  findings or prototype to our panel of experts on Day 1.
                 </p>
               </div>
             </motion.div>

@@ -16,10 +16,10 @@ export default function ConclaveHighlights() {
       href: "/speakers"
     },
     {
-      title: "Innovation Pitch: Idea Vista",
-      subtitle: "From Vision to Reality",
+      title: "Poster Presentation: Idea Vista",
+      subtitle: "Showcasing Breakthroughs",
       icon: Lightbulb,
-      description: "Witness ground-breaking project pitches from students and early-stage startups. A domain-agnostic platform where inter-disciplinary ideas challenge the status quo.",
+      description: "Witness ground-breaking research and innovation through poster presentations. A domain-agnostic platform where inter-disciplinary ideas challenge the status quo.",
       tag: "Day 1 - Track 1",
       accent: "purple",
       href: "/idea-vista"

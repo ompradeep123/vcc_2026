@@ -42,7 +42,7 @@ export default function Schedule() {
           {
             track: "Track-1",
             event: "Idea Vista",
-            description: "(Poster Presentation: Pitch your Tech ideas)",
+            description: "(Poster Presentation: Showcasing Tech Innovations)",
           },
           {
             track: "Track-2",

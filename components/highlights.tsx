@@ -17,7 +17,7 @@ const events = [
   {
     icon: Lightbulb,
     title: "Idea Vista",
-    description: "Idea Pitching & Innovation Presentation",
+    description: "Poster Presentation & Innovation Showcasing",
   },
   {
     icon: Zap,
