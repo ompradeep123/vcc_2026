@@ -28,7 +28,7 @@ export default function Vibathon() {
                             <Activity className="w-16 h-16 text-emerald-500 animate-pulse" />
                         </div>
                         <h1 className="font-serif text-6xl md:text-7xl font-bold mb-6 text-balance">
-                            Viba<span className="text-emerald-500">thon</span>
+                            Vibe<span className="text-emerald-500">athon</span>
                         </h1>
                         <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-8">
                             The Ultimate <span className="text-emerald-500 font-bold">Vibe Coding</span> Experience.
@@ -136,7 +136,7 @@ export default function Vibathon() {
                         >
                             <h2 className="text-4xl font-bold mb-6 font-serif">Inter-Domain Synergy</h2>
                             <p className="text-foreground/70 mb-8 leading-relaxed">
-                                Vibathon breaks the traditional silos of hackathons. We provide inter-domain discipline
+                                Vibeathon breaks the traditional silos of hackathons. We provide inter-domain discipline
                                 problem statements where your security expertise might protect a medical data stream,
                                 or your financial logic could secure a decentralized network.
                             </p>
