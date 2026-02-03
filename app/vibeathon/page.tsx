@@ -136,7 +136,7 @@ export default function Vibeathon() {
                         >
                             <h2 className="text-4xl font-bold mb-6 font-serif">Inter-Domain Synergy</h2>
                             <p className="text-foreground/70 mb-8 leading-relaxed">
-                                Vibeathon breaks the traditional silos of hackathons. We provide inter-domain discipline
+                                Vibathon breaks the traditional silos of hackathons. We provide inter-domain discipline
                                 problem statements where your security expertise might protect a medical data stream,
                                 or your financial logic could secure a decentralized network.
                             </p>
