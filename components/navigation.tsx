@@ -29,7 +29,7 @@ export default function Navigation() {
 
   const eventItems = [
     { label: "Idea Vista", href: "/idea-vista" },
-    { label: "Vibathon", href: "/vibathon" },
+    { label: "Vibeathon", href: "/vibeathon" },
     { label: "Workshops", href: "/workshops" },
     { label: "Tech Games", href: "/tech-games" },
   ]
