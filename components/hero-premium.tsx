@@ -58,16 +58,16 @@ export default function HeroPremium() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <div className="flex flex-col items-center gap-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-colors text-sm sm:text-base"
+              disabled
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary/50 text-primary-foreground rounded-full font-semibold cursor-not-allowed transition-colors text-sm sm:text-base"
             >
-              Register Now
+              Registration Closed
             </motion.button>
-            
+            <p className="text-primary font-bold animate-pulse text-sm sm:text-base">See you next year!</p>
           </div>
         </motion.div>
       </div>

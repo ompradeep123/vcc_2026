@@ -39,9 +39,9 @@ export default function RegistrationCTA() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Early Bird Registration</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Registration Closed</h2>
           <p className="text-foreground/70 max-w-2xl mx-auto">
-            Choose your pass and join us for an unforgettable experience. Limited early bird pricing available.
+            The registration for VCC 2026 has reached its capacity and is now closed. Thank you for your interest.
           </p>
         </motion.div>
 
@@ -61,9 +61,8 @@ export default function RegistrationCTA() {
               )}
 
               <div
-                className={`relative rounded-lg p-8 ${
-                  tier.highlight ? "bg-background border-primary/50" : "bg-card/50 border-foreground/10"
-                } border transition-all duration-300 hover:border-primary/50`}
+                className={`relative rounded-lg p-8 ${tier.highlight ? "bg-background border-primary/50" : "bg-card/50 border-foreground/10"
+                  } border transition-all duration-300 hover:border-primary/50`}
               >
                 {tier.highlight && (
                   <motion.div
@@ -101,18 +100,20 @@ export default function RegistrationCTA() {
                   </ul>
 
                   {/* CTA Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      tier.highlight
-                        ? "bg-foreground text-background hover:shadow-lg hover:shadow-primary/50"
-                        : "border border-foreground/30 text-foreground hover:border-primary hover:text-primary"
-                    }`}
-                  >
-                    Register Now
-                  </motion.button>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      disabled
+                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 cursor-not-allowed ${tier.highlight
+                        ? "bg-foreground/50 text-background"
+                        : "border border-foreground/30 text-foreground/50"
+                        }`}
+                    >
+                      Closed
+                    </motion.button>
+                    <p className="text-primary font-bold animate-pulse text-[10px]">See you next year!</p>
+                  </div>
                 </div>
               </div>
             </motion.div>

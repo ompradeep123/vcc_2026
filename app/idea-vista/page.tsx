@@ -36,14 +36,17 @@ export default function IdeaVista() {
               <span className="text-pink-500 font-semibold italic"> world-changing innovation</span> here.
               Open to all domains.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-              className="px-8 py-4 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors mb-12 shadow-lg shadow-purple-500/20"
-            >
-              Register for Poster Presentation
-            </motion.button>
+            <div className="flex flex-col items-center gap-4 mb-12">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                disabled
+                className="px-8 py-4 bg-purple-500/50 text-white rounded-full font-semibold cursor-not-allowed transition-colors shadow-lg shadow-purple-500/20"
+              >
+                Registration Closed
+              </motion.button>
+              <p className="text-purple-500 font-bold animate-pulse text-sm sm:text-base">See you next year!</p>
+            </div>
 
             {/* Enhanced Complex Scroll Indicator */}
             <motion.div

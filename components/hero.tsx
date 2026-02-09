@@ -44,10 +44,13 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-semibold text-primary-foreground hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105 flex items-center justify-center gap-2 group text-sm sm:text-base">
-                Register Now <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+              <div className="flex flex-col items-center sm:items-start gap-2 w-full sm:w-auto">
+                <button disabled className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-primary/50 text-primary-foreground rounded-lg font-semibold cursor-not-allowed transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                  Registration Closed
+                </button>
+                <p className="text-primary font-bold animate-pulse text-xs sm:text-sm pl-2">See you next year!</p>
+              </div>
               <button className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-primary/50 rounded-lg font-semibold text-primary hover:bg-primary/10 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
                 View Schedule <ArrowRight size={20} />
               </button>

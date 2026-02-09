@@ -92,10 +92,12 @@ export default function HeroUnique() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
-              <button onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')} className="group w-full sm:w-auto px-6 sm:px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
-                Register Now
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="flex flex-col items-center sm:items-start gap-2">
+                <button disabled className="group w-full sm:w-auto px-6 sm:px-8 py-3 bg-foreground/50 text-background font-semibold rounded-lg cursor-not-allowed transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                  Registration Closed
+                </button>
+                <p className="text-primary font-bold animate-pulse text-xs sm:text-sm pl-2">See you next year!</p>
+              </div>
               <button className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-foreground/30 text-foreground font-semibold rounded-lg hover:border-primary hover:text-primary transition-all text-sm sm:text-base">
                 Learn More
               </button>

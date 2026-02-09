@@ -68,14 +68,17 @@ export default function FlagHunt() {
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-red-500/50 to-transparent mt-1"></div>
             </motion.div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-              className="px-8 py-4 bg-red-500 text-white rounded-full font-semibold hover:bg-red-600 transition-colors shadow-lg shadow-red-500/25 mb-12"
-            >
-              Register Team Now
-            </motion.button>
+            <div className="flex flex-col items-center gap-4 mb-12">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                disabled
+                className="px-8 py-4 bg-red-500/50 text-white rounded-full font-semibold cursor-not-allowed transition-colors shadow-lg shadow-red-500/25"
+              >
+                Registration Closed
+              </motion.button>
+              <p className="text-red-500 font-bold animate-pulse text-sm sm:text-base">See you next year!</p>
+            </div>
 
             {/* Enhanced Complex Scroll Indicator */}
             <motion.div

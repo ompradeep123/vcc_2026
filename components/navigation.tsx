@@ -24,7 +24,7 @@ export default function Navigation() {
     { label: "Conclave Panel", href: "/speakers" },
     { label: "FlagHunt 7.0", href: "/flaghunt" },
     { label: "Conclave Schedule", href: "/schedule" },
-    { label: "Registration", href: "/register" },
+    { label: "Registration Closed", href: "/register" },
   ]
 
   const eventItems = [

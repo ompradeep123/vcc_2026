@@ -75,9 +75,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Registration & Pricing</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Registration Closed</h2>
           <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
-            Flexible pricing for students and external participants
+            Thank you for your overwhelming response. See you next year!
           </p>
         </motion.div>
 
@@ -89,11 +89,10 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className={`relative rounded-xl transition-all ${
-                tier.highlighted
+              className={`relative rounded-xl transition-all ${tier.highlighted
                   ? "glass-effect border-2 border-primary shadow-lg shadow-primary/30 scale-105"
                   : "glass-effect border border-primary/20 hover:border-primary/50"
-              }`}
+                }`}
             >
               {tier.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -113,16 +112,18 @@ export default function Pricing() {
                   <span className="text-foreground/60 ml-2 text-sm">{tier.currency}</span>
                 </div>
 
-                <button
-                  onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-                  className={`w-full py-3 rounded-lg font-semibold transition-all mb-6 ${
-                    tier.highlighted
-                      ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-lg hover:shadow-primary/50"
-                      : "border border-primary/50 text-primary hover:bg-primary/10"
-                  }`}
-                >
-                  Register Now
-                </button>
+                <div className="flex flex-col items-center gap-2 mb-6">
+                  <button
+                    disabled
+                    className={`w-full py-3 rounded-lg font-semibold transition-all cursor-not-allowed ${tier.highlighted
+                        ? "bg-primary/50 text-primary-foreground"
+                        : "border border-primary/30 text-primary/50"
+                      }`}
+                  >
+                    Closed
+                  </button>
+                  <p className="text-[10px] font-bold text-primary animate-pulse">See you next year!</p>
+                </div>
 
                 <div className="space-y-3">
                   {tier.features.map((feature, fIdx) => (
@@ -145,8 +146,7 @@ export default function Pricing() {
           className="mt-12 p-6 rounded-lg bg-muted/30 border border-primary/20 text-center"
         >
           <p className="text-foreground/80">
-            <span className="font-semibold">Note:</span> Day Pass holders can participate in all events on that
-            particular day.
+            <span className="font-semibold">Notice:</span> Registration for VCC 2026 is officially closed. Stay tuned for future editions!
           </p>
         </motion.div>
       </div>

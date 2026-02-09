@@ -51,14 +51,17 @@ export default function Workshops() {
                             Hands-on sessions led by industry professionals. Gain practical knowledge
                             in forensics, incident response, and bug bounty hunting.
                         </p>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-                            className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20 mb-12"
-                        >
-                            Register for Workshops
-                        </motion.button>
+                        <div className="flex flex-col items-center gap-4 mb-12">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
+                                disabled
+                                className="px-8 py-4 bg-blue-600/50 text-white rounded-full font-semibold cursor-not-allowed transition-colors shadow-lg shadow-blue-500/20"
+                            >
+                                Registration Closed
+                            </motion.button>
+                            <p className="text-blue-500 font-bold animate-pulse text-sm sm:text-base">See you next year!</p>
+                        </div>
 
                         {/* Enhanced Complex Scroll Indicator */}
                         <motion.div

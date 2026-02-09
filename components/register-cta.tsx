@@ -26,19 +26,19 @@ export default function RegisterCTA() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-2 sm:pt-4">
+          <div className="flex flex-col items-center justify-center gap-4 pt-2 sm:pt-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://apps.veltech.edu.in/registration/cybercatalyst/reg/', '_blank')}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-bold text-sm sm:text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+              disabled
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-primary/50 text-primary-foreground rounded-full font-bold text-sm sm:text-lg cursor-not-allowed transition-colors shadow-lg shadow-primary/30"
             >
-              Register Now
+              Registration Closed
             </motion.button>
-            
+            <p className="text-primary font-bold animate-pulse text-sm sm:text-base">See you next year!</p>
           </div>
 
-          <p className="text-xs sm:text-sm text-foreground/60">Early bird registrations open now</p>
+          <p className="text-xs sm:text-sm text-foreground/60 underline decoration-primary/30">Registration is officially closed for the 2026 edition</p>
         </motion.div>
       </div>
     </section>

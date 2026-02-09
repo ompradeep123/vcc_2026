@@ -25,7 +25,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#register" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Register
+                  Registration Closed
                 </a>
               </li>
               <li>
