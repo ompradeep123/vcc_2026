@@ -5,7 +5,7 @@ import Footer from "@/components/footer-premium"
 import { motion } from "framer-motion"
 import { Activity, Zap, Trophy, Users, ChevronDown, Cpu, Globe, Infinity as InfinityIcon } from "lucide-react"
 
-export default function Vibathon() {
+export default function Vibeathon() {
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Navigation />
@@ -28,7 +28,7 @@ export default function Vibathon() {
                             <Activity className="w-16 h-16 text-emerald-500 animate-pulse" />
                         </div>
                         <h1 className="font-serif text-6xl md:text-7xl font-bold mb-6 text-balance">
-                            Vibe<span className="text-emerald-500">athon</span>
+                            Vibea<span className="text-emerald-500">thon</span>
                         </h1>
                         <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-8">
                             The Ultimate <span className="text-emerald-500 font-bold">Vibe Coding</span> Experience.

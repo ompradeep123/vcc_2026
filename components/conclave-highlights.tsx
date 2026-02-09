@@ -40,7 +40,7 @@ export default function ConclaveHighlights() {
       description: "A specialized hackathon focusing on VIBE Coding. Participants leverage AI-augmented workflows to build solutions for real-life problem statements.",
       tag: "Day 2 - Technical Hub",
       accent: "emerald",
-      href: "/vibathon"
+      href: "/vibeathon"
     },
     {
       title: "Advanced Skill Workshops",
